@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/error-boundaries/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/error-boundaries/static/js/main.66aaf06c.chunk.js",
-    "main.js.map": "/error-boundaries/static/js/main.66aaf06c.chunk.js.map",
+    "main.js": "/error-boundaries/static/js/main.8fd518bd.chunk.js",
+    "main.js.map": "/error-boundaries/static/js/main.8fd518bd.chunk.js.map",
     "runtime-main.js": "/error-boundaries/static/js/runtime-main.e9aaa7c1.js",
     "runtime-main.js.map": "/error-boundaries/static/js/runtime-main.e9aaa7c1.js.map",
     "static/js/2.ebc53c20.chunk.js": "/error-boundaries/static/js/2.ebc53c20.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.e9aaa7c1.js",
     "static/js/2.ebc53c20.chunk.js",
     "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.66aaf06c.chunk.js"
+    "static/js/main.8fd518bd.chunk.js"
   ]
 }
