@@ -14,7 +14,7 @@ class Erroring extends Component {
     this.doStuff();
   }
 
-  showBrokenThing() {
+  showBrokenThing = () => {
     this.setState({ showBrokenThing: true });
   }
 
