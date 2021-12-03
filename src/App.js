@@ -1,9 +1,10 @@
 import { Component } from 'react';
+import * as Sentry from "@sentry/react";
+
 import logo from './logo.svg';
 import './App.css';
 
-// import * as Sentry from "@sentry/react";
-
+import Erroring from './components/Erroring';
 class App extends Component {
   constructor(props) {
     super(props);
@@ -16,50 +17,22 @@ class App extends Component {
     throw new Error('This is an error');
   }
 
-  // componentDidCatch(error, info) {
-  //   Sentry.captureException(error);
-  //   this.setState({ error: true });
-  // }
+  componentDidCatch(error, info) {
+    Sentry.captureException(error);
+    this.setState({ error: true });
+  }
 
   render() {
     if (this.state.error) {
       return (
         <div className="App">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            YOU A BIG DUMMY
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        <p>Hello</p>
-        <button onClick={this.throwError}>Throw error</button>
-      </div>
-      )
+          <h1>AH CRAP, THE APP BROKE!</h1>
+        </div>
+      );
     }
 
     return (
-      <div className="App">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        <p>Hello</p>
-        <button onClick={this.throwError}>Throw error</button>
-      </div>
+      <Erroring />
     );
   }
 }
